@@ -61,7 +61,7 @@ function Popup(props) {
               </p>
               <p className="popup-p2">
                 {" "}
-                <em>Kan kombineres med andre rabatter & koder</em>
+                <em>OBS. Kan kombineres med andre rabatter & koder</em>
               </p>
               <div className="form-group">
                 <label htmlFor="email">E-mail:</label>
