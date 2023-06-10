@@ -7,6 +7,7 @@ import CenterNav from "../components/CenterNav";
 import Footer from "../components/Footer";
 import VinylSearch from "../components/VinylSearch";
 import ScrollToTopBtn from "../components/ScrollToTopBtn";
+import Popup from "../components/Popup";
 function RootLayout() {
   //Denne funktion er vores Root layout, det vi vil have skal
   //gælde på alle sider. Her styrer vi også
@@ -67,6 +68,28 @@ function RootLayout() {
     };
   }, []);
 
+  //popup test
+  //popup state
+  const [showPopUp, setShowPopUp] = useState(false);
+  //luk popup
+  const handlePopUp = () => {
+    setShowPopUp(!showPopUp);
+  };
+  //efter 5 sekunder bliver popup vist
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopUp(true);
+    }, 5000);
+    //setTimeout ryddes op når komponentet unmountes
+    return () => clearTimeout(timer);
+  }, []);
+  //erklærer en 'værdiløs' variabel med navnet popup
+  let popup = null;
+  //hvis showPopUp er true, så får popup værdien af vores Popup komponent
+  if (showPopUp) {
+    popup = <Popup handlePopUp={handlePopUp} />;
+  }
+
   //herunder har vi vores return statement, hvor vi får det
   //indhold ud, vi gerne vil have, og som er gældende på alle sider
   //Vi har både vores mobil, og desktop indhold herunder,
@@ -77,6 +100,7 @@ function RootLayout() {
     <>
       <div className="root-layout">
         <ScrollToTopBtn></ScrollToTopBtn>
+        {popup}
         <header>
           {isDesktop ? (
             /* Desktop-visning */

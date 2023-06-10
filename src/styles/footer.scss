@@ -43,32 +43,36 @@
       }
     }
     //nyhedsbrev form
-    form {
+    form.form-group-footer {
       margin-bottom: 50px;
-      .form-group {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        label {
-          color: $offwhite;
-          font-weight: $font-weight-semib;
-          font-size: $font-s-h3-web;
-        }
-        input {
-          background-color: $offwhite;
-          border: none;
-          border-radius: none;
-          padding: 10px;
-        }
-        button {
-          background-color: $bloodorange;
-          color: $coal;
-          border: none;
-          padding: 10px;
-          font-size: $font-s-btn-txt;
-        }
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      label {
+        color: $offwhite;
+        font-weight: $font-weight-semib;
+        font-size: $font-s-h3-web;
+      }
+      input {
+        background-color: $offwhite;
+        border: none;
+        border-radius: none;
+        padding: 10px;
+        -webkit-appearance: none;
+        border-radius: 0%;
+      }
+      input:focus {
+        outline: 1px solid $bloodorange;
+      }
+      button {
+        background-color: $bloodorange;
+        color: $coal;
+        border: none;
+        padding: 10px;
+        font-size: $font-s-btn-txt;
       }
     }
+
     //imusic hvidt logo
     .hvidt-logo {
       margin-bottom: 50px;
@@ -147,8 +151,11 @@
           }
         }
       }
+      .logo {
+        margin: 0;
+      }
       .hvidt-logo {
-        margin-bottom: 0;
+        margin: 0;
         width: 60%;
       }
       .row-two {
