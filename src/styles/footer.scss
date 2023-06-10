@@ -213,3 +213,20 @@
     }
   }
 }
+.info-boks {
+  p {
+    color: $offwhite;
+  }
+  .afmeld {
+    font-size: $font-s-lille-p;
+  }
+  ul {
+    li {
+      color: $offwhite;
+      font-style: italic;
+      padding-bottom: 4px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid $bloodorange;
+    }
+  }
+}

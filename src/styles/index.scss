@@ -859,6 +859,9 @@ p {
       border: 1px solid #ccc;
       border-radius: 4px;
       filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+      @media (min-width: 1240px) {
+        max-width: 600px;
+      }
     }
     input:focus {
       outline: 1px solid $bloodorange;
