@@ -56,7 +56,7 @@ function Popup(props) {
               </p>
               <h2 className="popup-heading">Få gratis fragt🥳</h2>
               <p className="popup-p">
-                På dit første køb hos imusic, ved at tilmelde dig vores
+                På dit næste køb hos imusic, ved at tilmelde dig vores
                 nyhedsbrev!
               </p>
               <p className="popup-p2">
